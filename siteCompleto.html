@@ -44,7 +44,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
+                    <a class="nav-link" href="#contatos">Contato</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -220,7 +220,7 @@
         <!-- Formulário de Contato -->
         <div class="row mb-5">
             <div class="col-md-12">
-                <h4 class="text-center">
+                <h4 class="text-center" id="contatos">
                     Entre em contato com a gente
                 </h4>
             </div>
@@ -230,14 +230,36 @@
             <div class="col-md-6">
                 <form>
                     <div class="form-group">
-                        <label for="exampleFormControlInput1"> Email </label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
+                        <label for="nome">First name</label>
+                        <input type="text" class="form-control" id="nome" onkeyup="validaNome()">
+                        <div id="txtNome"></div>
+
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1"> Assunto </label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="sobrenome">Last name</label>
+                        <input type="text" class="form-control" id="sobrenome" onkeyup="validaSobrenome()">
+                        <div id="txtSobrenome"></div>
+                    </div>
+
+
+                    <div class="form-group ">
+                        <label for="email"> Email </label>
+                        <input type="email" class="form-control" id="email" onkeyup="validaEmail()">
+                        <div id="txtEmail"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Carregar Arquivo</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assunto"> Assunto </label>
+                        <textarea class="form-control" id="assunto" cols="60" rows="5"
+                            onkeyup="validaAssunto()"></textarea>
+                        <div id="txtAssunto"></div>
+                        <div id="contador"></div>
                     </div>
 
                     <div class="form-group d-flex justify-content-center">
@@ -251,34 +273,35 @@
             <div class="col-md-6">
                 <iframe class="w-100"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.5654512274427!2d-46.456697385020455!3d-23.655728484636096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce693f38ef5139%3A0x85161df6f4a0a91f!2sR.%20Eucal%C3%ADpto%2C%20792%20-%20Jardim%20Ipe%2C%20Mau%C3%A1%20-%20SP%2C%2009390-450!5e0!3m2!1spt-BR!2sbr!4v1647900848748!5m2!1spt-BR!2sbr"
-                    width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <!-- /Formulário de Contato -->
 
 
             <!-- Rodapé -->
             <hr>
-            <footer>
+            <div class="container d-flex justify-content-center">
+                <footer>
 
-                <div class="row mb-3">
-                    <div class="col-md-12 d-flex justify-content-center">
+                    <div class="row mb-3">
+                        <div class="col-md-12 d-flex justify-content-center">
 
-                        <a href="https://www.facebook.com/" target="_blank" class="p-3">
-                            <img class="tm-social" src="img/facebook.png" alt="Logo do Facebook">
-                        </a>
+                            <a href="https://www.facebook.com/" target="_blank" class="p-3">
+                                <img class="tm-social" src="img/facebook.png" alt="Logo do Facebook">
+                            </a>
 
-                        <a href="https://www.instagram.com/" target="_blank" class="p-3">
-                            <img class="tm-social" src="img/instagram.png" alt="Logo do Instagram">
-                        </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="p-3">
+                                <img class="tm-social" src="img/instagram.png" alt="Logo do Instagram">
+                            </a>
 
 
-                        <a href="https://www.linkedin.com/" target="_blank" class="p-3">
-                            <img class="tm-social" src="img/linkedin.png" alt="Logo do LinkedIn">
-                        </a>
+                            <a href="https://www.linkedin.com/" target="_blank" class="p-3">
+                                <img class="tm-social" src="img/linkedin.png" alt="Logo do LinkedIn">
+                            </a>
+                        </div>
                     </div>
-                </div>
+            </div>
         </div>
-
         <div class="row">
             <div class="col-md-12">
                 <p class="text-center">
@@ -299,6 +322,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
+
+    <script src="./js/script.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
