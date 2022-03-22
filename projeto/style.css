@@ -1,0 +1,12 @@
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background-color: #131515;
+}
+
+.color {
+   color: rgba(221, 221, 221, 0.822); 
+}
+

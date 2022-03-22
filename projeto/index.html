@@ -1,20 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bootstrap</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Link para pegar o estilo CSS dos servidores do Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    
+    
+
+    <style>
+        .tm-social {
+            width: 50px;
+            height: 50px;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+
+    <title>Japan Animes</title>
 </head>
 
 <body>
-<!--Menu-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand text-light" href="#">Animes</a>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">Japan Animes</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,87 +39,325 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-
                 <li class="nav-item active">
-                    <a class="nav-link text-light" href="#">Home <span class="sr-only">(Página Inicial)</span></a>
-                </li>
-
-                <li class="nav-item active">
-                    <a class="nav-link text-light" href="#">2 <span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item active">
-                    <a class="nav-link text-light" href="#">3 <span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item active">
-                    <a class="nav-link text-light" href="#">4 <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home <span class="sr-only">(Inicio)</span></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Link</a>
+                    <a class="nav-link" href="#">Catálogo</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre Nós</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contatos">Contato</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-expanded="false">
-                        Redes Sociais
+                        Menu
                     </a>
-
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item " href="#">Instagram</a>
-                        <a class="dropdown-item " href="#">Facebook</a>
+                        <a class="dropdown-item" href="#">Login</a>
+                        <a class="dropdown-item" href="#">Cadastro</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item " href="#">LinkedIn</a>
+                        <a class="dropdown-item" href="#">Configurações</a>
                     </div>
-
+                </li>
             </ul>
-            <form class="form-inline my-2 my-dark-0">
-                <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
-    </nav> <!--/Menu-->
+    </nav>
+    <!-- /NavBar -->
 
-    <!-- Grid -->
-<div class="container">
+    <!-- Carrousel -->
+    <div id="carouselExampleIndicators" class="carousel slide text-light" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
 
-    <div class="row mt-5 d-flex justify-content-center">
-        <div class="col-md-1 p-0">
-            <div class="bg-danger">1 colunas</div>
+        <div class="carousel-inner text-light">
+            <div class="carousel-item active">
+                <img src="./assets/img/baixados1.jpg" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-item text-light">
+                <img src="./assets/img/baixados2.jpg" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-item text-light">
+                <img src="./assets/img/baixados3.jpg" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-item text-light">
+                <img src="./assets/img/baixados4.jpg" class="d-block w-100" alt="...">
+            </div>
         </div>
 
-        <div class="col-md-1 p-0">
-            <div class="bg-warning">2 colunas</div>
+        <button class="carousel-control-prev text-light" type="button" data-target="#carouselExampleIndicators"
+            data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </button>
+
+        <button class="carousel-control-next text-light" type="button" data-target="#carouselExampleIndicators"
+            data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </button>
+    </div>
+    <!-- /Carrousel -->
+
+    <!-- Jumbotron-->
+    <div class="jumbotron jumbotron-fluid text-light bg-dark">
+        <div class="container">
+            <h1 class="display-4">Animes Info</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+    <!-- /Jumbotron-->
+
+    <!-- Cards -->
+    <div class="container d-flex">
+        <!-- <div class="card-columns"> -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="./assets/img/c1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title that wraps to a new line</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+
+            <div class="card p-3">
+                <blockquote class="blockquote mb-0 card-body">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                    <footer class="blockquote-footer text-white">
+                        <small class="text-muted">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
         </div>
 
-        <div class="col-md-1 p-0">
-            <div class="bg-info">3 colunas</div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="./assets/img/c2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+                    </p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+
+            <div class="card p-3">
+                <blockquote class="card-body blockquote mb-0">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                    <footer class="blockquote-footer text-white">
+                        <small>
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
+
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
         </div>
 
-        <div class="col-md-1 p-0">
-            <div class="bg-dark">4 colunas</div>
-        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="./assets/img/c3.jpg" class="card-img" alt="...">
+            </div>
+            
+            <div class="card p-3 text-right text-center">
+                    <a href="https://discord.gg" target="_blank">
+                        <p class="m-0">Acesse nosso Discord</p>
+                    </a>
+            </div>
 
-        <div class="col-md-1 p-0">
-            <div class="bg-success">5 colunas</div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is another card with title and supporting text below. This card has some
+                        additional content to make it slightly taller overall.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card p-3">
+                <blockquote class="blockquote mb-0 card-body">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                    <footer class="blockquote-footer text-white">
+                        <small class="text-muted">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
         </div>
     </div>
 
-</div>
-    <!-- /Grid -->
+    <!-- /Cards -->
 
-    <!--Scripts necessário para utilização dos códigos JS do Bootstrap-->
+    <!-- Texto e Vídeo -->
+    <div class="row mt-5 mb-5 color">
+        <div class="col-md-6">
+            <h3>Texto teste</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam neque debitis accusantium molestiae
+                iste repellat officia expedita doloremque consectetur, unde dolore quaerat provident. Asperiores
+                obcaecati eaque voluptas vero unde aliquam.
+            </p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ducimus reprehenderit quaerat earum
+                corrupti laboriosam maiores repellat praesentium fugit adipisci porro expedita commodi, molestiae
+                autem veritatis cum beatae mollitia est.
+            </p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi officia blanditiis qui animi
+                totam, est ut vel accusantium in adipisci neque ex, dicta incidunt illum corrupti? Sed, porro quo?
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-auEUehUsbQ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+    <!-- /Texto e Vídeo -->
+
+    <!-- Formulário de Contato -->
+    <div class="row mb-5 color">
+        <div class="col-md-12">
+            <h4 class="text-center" id="contatos">
+                Entre em contato com a gente
+            </h4>
+        </div>
+    </div>
+
+    <div class="row d-flex align-items-center color">
+        <div class="col-sm-6">
+            <form>
+                <div class="form-group">
+                    <label for="nome">First name</label>
+                    <input type="text" class="form-control" id="nome" onkeyup="validaNome()">
+                    <div id="txtNome"></div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="sobrenome">Last name</label>
+                    <input type="text" class="form-control" id="sobrenome" onkeyup="validaSobrenome()">
+                    <div id="txtSobrenome"></div>
+                </div>
+
+
+                <div class="form-group ">
+                    <label for="email"> Email </label>
+                    <input type="email" class="form-control" id="email" onkeyup="validaEmail()">
+                    <div id="txtEmail"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Carregar Arquivo</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+
+                <div class="form-group">
+                    <label for="assunto"> Assunto </label>
+                    <textarea class="form-control" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+                    <div id="txtAssunto"></div>
+                    <div id="contador"></div>
+                </div>
+
+                <div class="form-group d-flex justify-content-center">
+                    <button class="btn-outline-success">Enviar</button>
+
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-md-6 color">
+            <iframe class="w-100"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.5654512274427!2d-46.456697385020455!3d-23.655728484636096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce693f38ef5139%3A0x85161df6f4a0a91f!2sR.%20Eucal%C3%ADpto%2C%20792%20-%20Jardim%20Ipe%2C%20Mau%C3%A1%20-%20SP%2C%2009390-450!5e0!3m2!1spt-BR!2sbr!4v1647900848748!5m2!1spt-BR!2sbr"
+                width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <!-- /Formulário de Contato -->
+
+
+        <!-- Rodapé -->
+        <hr>
+        <div class="container d-flex justify-content-center color">
+            <footer>
+
+                <div class="row mb-3">
+                    <div class="col-md-12 d-flex justify-content-center">
+
+                        <a href="https://www.facebook.com/" target="_blank" class="p-3">
+                            <img class="tm-social" src="./assets/img/facebook.png" alt="Logo do Facebook">
+                        </a>
+
+                        <a href="https://www.instagram.com/" target="_blank" class="p-3">
+                            <img class="tm-social" src="./assets/img/instagram.png" alt="Logo do Instagram">
+                        </a>
+
+
+                        <a href="https://www.linkedin.com/" target="_blank" class="p-3">
+                            <img class="tm-social" src="./assets/img/linkedin.png" alt="Logo do LinkedIn">
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="row color">
+        <div class="col-md-12">
+            <p class="text-center">
+                Todos os direitos reservados: Hikaru Yamanaka
+            </p>
+        </div>
+    </div>
+
+    </footer>
+    <!-- /Rodapé -->
+
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
 
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
 </body>
 
 </html>
